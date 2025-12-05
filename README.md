@@ -1,3 +1,5 @@
+Note: this repo stores scripts for students to play with (several mistakes exist)
+
 *Final assignment*
 
 team:  max group of 3 people
