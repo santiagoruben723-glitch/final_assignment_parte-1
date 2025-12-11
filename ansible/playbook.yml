@@ -19,21 +19,43 @@
         state: started
         enabled: yes
 
-    - name: Create a custom index.html
+    - name: Create and serve the custom index.html (Req 1.2a)
       copy:
+        # CONTEÚDO HTML ATUALIZADO ABAIXO
         content: |
           <!DOCTYPE html>
           <html>
           <head>
-              <title>Welcome to Nginx on Azure!</title>
+              <title>Projeto Final AS - NGINX & DHCP</title>
+              <meta charset="UTF-8">
               <style>
-                  body { font-family: sans-serif; text-align: center; padding: 50px; }
-                  h1 { color: #0078d4; }
+                  body { font-family: 'Arial', sans-serif; text-align: center; padding: 50px; background-color: #f4f4f9; }
+                  .container { 
+                      background-color: #ffffff; 
+                      padding: 30px; 
+                      border-radius: 10px; 
+                      box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+                      display: inline-block; 
+                      max-width: 600px;
+                  }
+                  h1 { color: #0056b3; }
+                  p { color: #555; font-size: 1.1em; }
+                  .success { color: green; font-weight: bold; }
+                  .details { margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px; }
               </style>
           </head>
           <body>
-              <h1>Success! Nginx is running on your Azure VM.</h1>
-              <p>Provisioned with Terraform and configured with Ansible.</p>
+              <div class="container">
+                  <h1>✅ Sucesso na Configuração!</h1>
+                  <p>O servidor NGINX foi provisionado com **Terraform** e configurado com **Ansible** no Azure.</p>
+                  
+                  <div class="details">
+                      <p><span class="success">Requisito 1:</span> NGINX e página web customizada servidos.</p>
+                      <p><span class="success">Requisito 2:</span> VM configurada como servidor **DHCP** (instalação e ficheiros de configuração aplicados).</p>
+                  </div>
+                  
+                  <p style="margin-top: 30px;">**Entrega Final:** Grupo de 3 pessoas | 9 de janeiro de 2026</p>
+              </div>
           </body>
           </html>
         dest: /var/www/html/index.html
